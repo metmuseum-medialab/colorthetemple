@@ -40,7 +40,7 @@ void testApp::setup(){
 
     
     drawingsColors[0] = ofColor(255,255,255);
-    drawingsColors[1] = ofColor(0, 170, 120);//ofColor(30,40,78);
+    drawingsColors[1] = ofColor(0, 140, 120); //ofColor(0, 170, 120);//ofColor(30,40,78);
     drawingsColors[2] = ofColor(140,70,32);
     drawingsColors[3] = ofColor(255,235,150);
     drawingsColors[4] = ofColor(30,20,20);
@@ -48,10 +48,10 @@ void testApp::setup(){
     drawingsColors[6] = ofColor(150, 60, 35); //150, 75, 60); // ofColor(3, 100, 32);
     drawingsColors[7] = ofColor(190,160,40);
     drawingsColors[8] = ofColor(0,115,100);
-    drawingsColors[9] = ofColor(0, 140, 120);
-    drawingsColors[10] = ofColor(0, 140, 120); //ofColor(0, 170, 120);//ofColor(30,40,80);
+    drawingsColors[9] = ofColor(36, 33, 68);//ofColor(0, 140, 120);
+    drawingsColors[10] = ofColor(36, 33, 68);//ofColor(0, 140, 120); //ofColor(0, 170, 120);//ofColor(30,40,80);
     drawingsColors[11] = ofColor(255,200,0);
-    drawingsColors[12] = ofColor(0,80,80);// ofColor(0, 170, 120);
+    drawingsColors[12] = ofColor(36, 33, 68);//ofColor(0,80,80);// ofColor(0, 170, 120);
     drawingsColors[13] = ofColor(255,255,255);
     drawingsColors[14] = ofColor(165,10,10);
     drawingsColors[15] = ofColor(255,200,0);
@@ -63,7 +63,7 @@ void testApp::setup(){
     drawingsColors[21] = ofColor(30,20,17);
     drawingsColors[22] = ofColor(255,255,255);
     drawingsColors[23] = ofColor(255,200,0);
-    drawingsColors[24] = ofColor(10, 120, 32);
+    drawingsColors[24] = drawingsColors[24] = ofColor(0, 157, 100); //ofColor(10, 120, 32);
 
 
 	for(int i = 0; i < 25; i++){
