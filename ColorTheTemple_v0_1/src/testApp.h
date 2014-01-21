@@ -28,7 +28,15 @@ public:
 	MLSVGObject augustus;
 	MLSVGObject table;
 	MLSVGObject glyphs;
+	MLSVGObject glyphZoom;
 	
 	ofxSyphonServer mainOutputSyphonServer;
+	ofPolyline line;
 	
+	bool mouseScalesGlyph;
+	float scale, scaleAt, scaleTarget;
+	
+	ofPoint drawAt, drawTarget;
+	
+
 };
