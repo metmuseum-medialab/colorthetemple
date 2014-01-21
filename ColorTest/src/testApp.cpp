@@ -83,8 +83,7 @@ void testApp::setup(){
 	drawingsColors[26] = blueLight;
 
 
-	for(int i = 0; i < drawingsColors.size(); i++){
-        
+	for(int i = 0; i < drawingsColors.size(); i++){        
         
         MLSVGObject h;
         h.load(names[i], drawingsColors[i]);
