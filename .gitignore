@@ -84,3 +84,6 @@ Desktop.ini
 
 # Miscellaneous
 .mailmap
+
+# Ignore movie files in the OF data folder
+SpacebrewController/bin/data/*.mov
