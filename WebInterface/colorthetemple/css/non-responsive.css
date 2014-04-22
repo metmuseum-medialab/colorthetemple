@@ -1,0 +1,35 @@
+/* Template-specific stuff
+ *
+ * Customizations just for the template; these are not necessary for anything
+ * with disabling the responsiveness.
+ */
+
+/* Account for fixed navbar */
+body {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  min-width: 970px;
+}
+
+
+/* Non-responsive overrides
+ *
+ * Utilitze the following CSS to disable the responsive-ness of the container,
+ * grid system, and navbar.
+ */
+
+/* Reset the container */
+.container {
+  max-width: none !important;
+  width: 970px;
+}
+
+/* Demonstrate the grids */
+.col-xs-6 {
+  margin-bottom: 15px;
+}
+
+.btn-lg {
+  padding: 15px;
+  font-size: 25px;
+}

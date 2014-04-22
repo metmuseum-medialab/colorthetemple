@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+    <title>Color the Temple Controller</title>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+    <script type="text/javascript" src="js/jq.js"></script>
+	<script type="text/javascript" src="js/sb-1.3.0.js"></script>
+    <script type="text/javascript">
+
+		$(window).on("load", setup);
+	      
+		// Spacebrew Object
+		var sb, app_name = "CTT Remote";
+
+		/**
+	     * setup Configure spacebrew connection and adds the mousedown listener.
+	     */
+		function setup (){
+
+			// create spacebrew client object
+			sb = new Spacebrew.Client("mattfelsen.local", {reconnect:true});
+
+			// set the base description
+			sb.name(app_name);
+			sb.description("Web remote for Color the Temple by the Met MediaLab");
+
+			// configure the publication and subscription feeds
+			sb.addPublish( "button1", "boolean", "false" );
+			sb.addPublish( "button2", "boolean", "false" );
+			sb.addPublish( "button3", "boolean", "false" );
+			sb.addPublish( "button4", "boolean", "false" );
+			sb.addPublish( "button5", "boolean", "false" );
+			sb.addPublish( "button11", "boolean", "false" );
+
+			sb.addPublish( "button6", "boolean", "false" );
+			sb.addPublish( "button7", "boolean", "false" );
+			sb.addPublish( "button8", "boolean", "false" );
+			sb.addPublish( "button9", "boolean", "false" );
+			sb.addPublish( "button10", "boolean", "false" );
+
+			sb.addPublish( "button12", "boolean", "false" );
+			sb.addPublish( "button13", "boolean", "false" );
+			sb.addPublish( "button14", "boolean", "false" );
+			sb.addPublish( "button15", "boolean", "false" );
+			sb.addPublish( "button16", "boolean", "false" );
+			sb.addPublish( "button17", "boolean", "false" );
+			sb.addPublish( "button18", "boolean", "false" );
+			sb.addPublish( "button19", "boolean", "false" );
+			sb.addPublish( "button20", "boolean", "false" );
+
+			// override Spacebrew events - this is how you catch events coming from Spacebrew
+			sb.onBooleanMessage = onBooleanMessage;
+			sb.onOpen = onOpen;
+
+			// connect to spacbrew
+			sb.connect();
+
+			// listen to the mouse 
+			$(".button").on("mousedown", onButtonPress);
+			$(".button").on("mouseup", onButtonRelease);
+		}	
+
+		/**
+		 * Function that is called when Spacebrew connection is established
+		 */
+		function onOpen() {
+			var message = "Connected as <strong>" + sb.name() + "</strong>. ";
+			$("#name").html( message );
+		}
+
+		/**
+	     * Function that is called whenever the button is pressed.  
+	     * @param  {Event object} evt Holds information about the button press event
+	     */
+		function onButtonPress (evt){
+		    //console.log("[onButtonPress] button has been pressed"); 
+	        sb.send($(this).attr("id"), "boolean", "true");
+		}
+
+		/**
+	     * Function that is called whenever the button is released.  
+	     * @param  {Event object} evt Holds information about the button press event
+	     */
+		function onButtonRelease (evt){
+	      	//console.log("[onButtonRelease] button has been released"); 
+	        sb.send($(this).attr("id"), "boolean", "false");
+		}
+
+		/**
+		 * onBooleanMessage Function that is called whenever new spacebrew boolean messages are received.
+		 *          It accepts two parameters:
+		 * @param  {String} name    Holds name of the subscription feed channel
+		 * @param  {Boolean} value  Holds value received from the subscription feed
+		 */
+		function onBooleanMessage( name, value ){
+			console.log("[onBooleanMessage] boolean message received ", value);
+			if (value) {
+		        document.body.style.background = "rgb(100,255,100)"; 
+			} else {
+		        document.body.style.background = "rgb(220,220,220)"; 				
+			}
+		}
+
+	</script>
+	<style type="text/css">
+		.button {
+			display: block;
+			margin-bottom: 20px;
+		}
+	</style>
+	</head>
+
+	<body>
+		<h3>Colors & Patterns</h3>
+		<a class="button" id="button1">Black</a>
+		<a class="button" id="button2">Outlines</a>
+		<a class="button" id="button3">Colors</a>
+		<a class="button" id="button4">Patterns</a>
+		<a class="button" id="button5">White background</a>
+		<a class="button" id="button11">No background</a>
+
+		<br><br>
+
+		<h3>Highlighting Figures</h3>
+		<!-- <a class="button" id="button6">No Highlight</a> -->
+		<a class="button" id="button7">Horus & Hathor</a>
+		<a class="button" id="button8">Augustus</a>
+		<a class="button" id="button9">Augustus & Table</a>
+		<a class="button" id="button10">No Highlight</a>
+
+		<h3>Offering Scene</h3>
+		<a class="button" id="button12">Only gods</a>
+		<a class="button" id="button13">Augustus approaches</a>
+		<a class="button" id="button14">3D rotate</a>
+		<a class="button" id="button15">Cake side-view</a>
+		<a class="button" id="button16">Cake fade out</a>
+		<a class="button" id="button17">Cake rotate back</a>
+		<a class="button" id="button18">3D rotate back</a>
+		<a class="button" id="button19">Fade out background</a>
+		<!-- <a class="button" id="button20">Horus</a> -->
+		
+
+		</br></br>
+		<div id="name">Trying to connect</div>
+	</body>
+
+</html>
