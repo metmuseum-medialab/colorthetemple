@@ -5,7 +5,7 @@ void testApp::setup(){
     ofSetFrameRate(60);
 	
 	// Spacebrew app setup
-    string host = "192.168.0.1";
+    string host = "127.0.0.1";
     string name = "Color the Temple Controller";
     string description = "oF App for Color the Temple by the Met MediaLab";
     
