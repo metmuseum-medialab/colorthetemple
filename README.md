@@ -10,3 +10,5 @@ Some of these examples require:
 * Rockwell Labs' [ofxLibwebsockets](https://github.com/labatrockwell/ofxLibwebsockets)
 
 Then you need to make sure to add Syphon.framework (found in ofxSyphon/lib.osx) to the oF project, under Build Phases -> Copy Files.
+
+Make sure the IP address in testApp.cpp and webinterfaces/colorthetemple/js/main.js point to your spacebrew ip.
