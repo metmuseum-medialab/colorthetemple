@@ -6,8 +6,8 @@ An project by the MediaLab at The Metropolitan Museum of Art in New York, NY.
 ## Requirements
 
 ### Software
-* [OpenFrameworks](openframeworks.cc)
-* [spacebrew](spacebrew.cc)
+* [OpenFrameworks](http://openframeworks.cc)
+* [spacebrew](http://spacebrew.cc)
 
 ### Addons
 * Anthony Stellato's [ofxSyphon](https://github.com/astellato/ofxSyphon)
