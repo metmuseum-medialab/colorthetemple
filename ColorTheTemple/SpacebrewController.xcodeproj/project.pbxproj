@@ -822,14 +822,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\\\\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					/Users/dahanj/Desktop/of_v0.8.1_osx_release/addons/ofxSyphon/libs/Syphon/lib/osx,
+					"../../..//addons/ofxSyphon/libs/Syphon/lib/osx",
 					"$(PROJECT_DIR)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
@@ -919,14 +912,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\\\\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					"/Users/matt/Documents/openFrameworks/OF\\\\\\ 0.8.0/addons/ofxSyphon/libs/Syphon/lib/osx",
-					/Users/dahanj/Desktop/of_v0.8.1_osx_release/addons/ofxSyphon/libs/Syphon/lib/osx,
+					"../../..//addons/ofxSyphon/libs/Syphon/lib/osx",
 					"$(PROJECT_DIR)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
