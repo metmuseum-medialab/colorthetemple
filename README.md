@@ -10,7 +10,8 @@ An project by the MediaLab at The Metropolitan Museum of Art in New York, NY.
 * [spacebrew](http://spacebrew.cc)
 
 ### Addons
-Addons install explanation
+[How to install addons in openFrameworks]()
+
 * Anthony Stellato's [ofxSyphon](https://github.com/astellato/ofxSyphon)
 * SpaceBrew's [ofxSpacebrew](https://github.com/Spacebrew/ofxSpacebrew)
 * Rockwell Labs' [ofxLibwebsockets](https://github.com/labatrockwell/ofxLibwebsockets)
@@ -31,4 +32,4 @@ Addons install explanation
 * `# cd WebInterfaces && python -m SimpleHTTPServer`
 First open up `mdig9317.local:8000/colorthetemple` with whatever devices you want to control the application
 They will then show up in the admin page, accessible from `mdig9317.local:8000/admin`
-Once you connect 
+Connect the controller to the receiver and enjoy the show!
