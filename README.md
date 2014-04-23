@@ -16,7 +16,7 @@ An project by the MediaLab at The Metropolitan Museum of Art in New York, NY.
 
 ### Building & Running
 
-* add `Syphon.framework` from `ofxSyphon/lib/osx` to the project, under Build Phases -> Copy Files
+* add `Syphon.framework` from `ofxSyphon/libs/Syphon/lib/osx` to the project, under Build Phases -> Copy Files
 * Make sure the IP address in `testApp.cpp` and `WebInterfaces/colorthetemple/js/main.js` point to the spacebrew server
 * `# cd WebInterfaces && python -m SimpleHTTPServer`
 
