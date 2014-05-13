@@ -31,6 +31,6 @@ An project by the MediaLab at The Metropolitan Museum of Art in New York, NY.
 
 #### the spacebrew admin page and controller page
 * `# cd WebInterfaces && python -m SimpleHTTPServer`
-First open up `mdig9317.local:8000/colorthetemple` with whatever devices you want to control the application
-They will then show up in the admin page, accessible from `mdig9317.local:8000/admin`
+First open up `<SERVER IP ADDRESS>:8000/colorthetemple` with whatever devices you want to control the application
+They will then show up in the admin page, accessible from `<SERVER IP ADDRESS>:8000/admin`
 Connect the controller to the receiver and enjoy the show!
