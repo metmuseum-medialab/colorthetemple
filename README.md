@@ -15,6 +15,8 @@ An project by the MediaLab at The Metropolitan Museum of Art in New York, NY.
     * SpaceBrew's [ofxSpacebrew](https://github.com/Spacebrew/ofxSpacebrew)
     * Rockwell Labs' [ofxLibwebsockets](https://github.com/labatrockwell/ofxLibwebsockets)
 
+* Install [madmapper](http://madmapper.com)
+
 ## Building the openFrameworks app
 
 * add `Syphon.framework` from `ofxSyphon/libs/Syphon/lib/osx` to the project, under Build Phases -> Copy Files
@@ -29,3 +31,13 @@ An project by the MediaLab at The Metropolitan Museum of Art in New York, NY.
 * Open up `localhost:8000/colorthetemple` with whatever devices you want to control the presentation app
   * Go to the admin page, accessible from `localhost:8000/admin`
   * Connect the controller to the receiver by clicking on them and enjoy the show!
+
+## Mapping the projection
+
+Open up madmapper, which will be used to deform the projection
+
+* click the colorthetemple syphon plugin
+* add a square mesh from the middle icon in the top left corner
+* click the 'warp mesh' checkbox in the bottom left, then start tweaking the subdivisions, dragging the mesh points...
+* to use on the projector, go to view -> view fullscreen
+  * make sure the display mirroring is OFF
