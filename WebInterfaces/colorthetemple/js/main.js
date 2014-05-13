@@ -13,8 +13,7 @@ function setup (){
 	$('body').css('background-color', disconnectColor);
 
 	// create spacebrew client object
-	sb = new Spacebrew.Client("MDIG9317.local", { reconnect: true });
-	// sb = new Spacebrew.Client("localhost", { reconnect: true });
+	sb = new Spacebrew.Client(window.location.hostname, { reconnect: true });
 
 	// set the base description
 	sb.name(app_name);
