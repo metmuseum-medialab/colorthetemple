@@ -6,7 +6,7 @@ An project by the MediaLab at The Metropolitan Museum of Art in New York, NY.
 ## Installation
 
 * Get the latest release of [spacebrew](http://spacebrew.cc), which is used to coordinate the web interface and presentation app.
-  * run `npm install` inside this directory to get all the required libraries
+  * run `npm install` inside the spacebrew directory to get all the required libraries
 
 * Get the latest release of [OpenFrameworks](http://openframeworks.cc), and rename to `openFrameworks`.
   * Clone this repository to `openFrameworks/apps`.
@@ -22,12 +22,9 @@ An project by the MediaLab at The Metropolitan Museum of Art in New York, NY.
   * make sure to check 'copy file if needed' when adding the syphon framework
 * Add the video files to `openFrameworks/apps/ColorTheTemple-master/ColorTheTemple/bin/data`
 
-## Running spacebrew
-
-* In the spacebrew directory, run `npm start`
-
 ## Connecting the web controller to the presentation app through spacebrew
 
+* Run spacebrew from the spacebrew directory, with `npm start`
 * Serve up the static html pages, with `# cd WebInterfaces && python -m SimpleHTTPServer`
 * Open up `localhost:8000/colorthetemple` with whatever devices you want to control the presentation app
   * Go to the admin page, accessible from `localhost:8000/admin`
