@@ -8,6 +8,7 @@ An project by the MediaLab at The Metropolitan Museum of Art in New York, NY.
 ### Software
 * [OpenFrameworks](http://openframeworks.cc)
 * [spacebrew](http://spacebrew.cc)
+* [madmapper](http://www.madmapper.com)
 
 ### Addons
 [How to install addons in openFrameworks](http://ofxaddons.com/howto/)
