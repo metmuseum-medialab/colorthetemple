@@ -27,7 +27,7 @@ An project by the MediaLab at The Metropolitan Museum of Art in New York, NY.
 ## Connecting the web controller to the presentation app through spacebrew
 
 * Run spacebrew from the spacebrew directory, with `npm start`
-* Serve up the static html pages, with `# cd WebInterfaces && python -m SimpleHTTPServer`
+* Serve up the static html pages from this repository, with `# cd WebInterfaces && python -m SimpleHTTPServer`
 * Open up `localhost:8000/colorthetemple` with whatever devices you want to control the presentation app
   * Go to the admin page, accessible from `localhost:8000/admin`
   * Connect the controller to the receiver by clicking on them and enjoy the show!
