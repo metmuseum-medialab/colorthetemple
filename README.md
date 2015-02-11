@@ -22,7 +22,7 @@ Clone [ofxSyphon](https://github.com/astellato/ofxSyphon), [ofxSpacebrew](https:
     $ git clone https://github.com/Spacebrew/ofxSpacebrew
     $ git clone https://github.com/labatrockwell/ofxLibwebsockets
 
-### Building the app
+### Building the app (openSpacebrewController.xcodeproj )
 
 * add `Syphon.framework` from `ofxSyphon/libs/Syphon/lib/osx` to the project, under Build Phases -> Copy Files
   * make sure to remove the existing Syphon framework from the copy files
