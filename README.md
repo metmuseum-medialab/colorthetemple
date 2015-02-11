@@ -17,7 +17,7 @@ Clone this repository to `~/openFrameworks/apps`
 
 Clone [ofxSyphon](https://github.com/astellato/ofxSyphon), [ofxSpacebrew](https://github.com/Spacebrew/ofxSpacebrew), and [ofxLibwebsockets](https://github.com/labatrockwell/ofxLibwebsockets) to `~/openFrameworks/addons`
 
-    $ cd ~/openFrameworks/apps
+    $ cd ~/openFrameworks/addons
     $ git clone https://github.com/astellato/ofxSyphon
     $ git clone https://github.com/Spacebrew/ofxSpacebrew
     $ git clone https://github.com/labatrockwell/ofxLibwebsockets
