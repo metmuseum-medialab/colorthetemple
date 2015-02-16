@@ -21,12 +21,13 @@ Clone [ofxSyphon](https://github.com/astellato/ofxSyphon), [ofxSpacebrew](https:
     $ git clone https://github.com/astellato/ofxSyphon
     $ git clone https://github.com/Spacebrew/ofxSpacebrew
     $ git clone https://github.com/labatrockwell/ofxLibwebsockets
+then fix your ofxLibwebsockets version to the one that still has openssl:
+    $ cd ofxLibwebsockets
+    $ git checkout 30a2d3c5a5d07b80dd5fb1794968df4a89b36ee0
 
 ### Building the app (openSpacebrewController.xcodeproj )
 
-* add `Syphon.framework` from `ofxSyphon/libs/Syphon/lib/osx` to the project, under Build Phases -> Copy Files
-  * make sure to remove the existing Syphon framework from the copy files
-  * make sure to check 'copy file if needed' when adding the syphon framework
+
 * Add the video files to `~/openFrameworks/apps/colorthetemple/ColorTheTemple/bin/data`
 
 ## Run madmapper for projection mapping
