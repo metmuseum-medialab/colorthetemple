@@ -27,7 +27,7 @@ then fix your ofxLibwebsockets version to the one that still has openssl:
     $ cd ofxLibwebsockets
     $ git checkout 30a2d3c5a5d07b80dd5fb1794968df4a89b36ee0
 
-### Building the app (openSpacebrewController.xcodeproj )
+### Building the app (openSpacebrewController.xcodeproj ) Mkae sure to build the DEBUG, not the RELEASE target
 
 
 * Add the video files to `~/openFrameworks/apps/colorthetemple/ColorTheTemple/bin/data`
