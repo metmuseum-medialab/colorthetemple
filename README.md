@@ -46,6 +46,7 @@ Open up madmapper, which will be used to deform the projection
 
 
 ## Setup spacebrew for remote control
+[note: normally you wouldn't run code right from the Downloads directory. You should probably move both the Spacebrew directory and the colorTheTemple project under a common directory, with its own openframeworks directory structure. But the below will work. 
 
 Download and unzip the latest release of [spacebrew](http://spacebrew.cc) to `~/Downloads`
 
@@ -60,7 +61,7 @@ Install the dependencies and run spacebrew
 
 Serve up the spacebrew admin page in another terminal and open it up in your web browser
 
-    $ cd ~/Downloads/Spacebrew-spacebrew*/admin
+    $ cd ~/openFrameworks/apps/colorthetemple/WebInterface
     $ python -m SimpleHTTPServer 8000
     $ open http://localhost:8000
 
