@@ -46,29 +46,38 @@ Open up madmapper, which will be used to deform the projection
 
 
 ## Setup spacebrew for remote control
-[note: normally you wouldn't run code right from the Downloads directory. You should probably move both the Spacebrew directory and the colorTheTemple project under a common directory, with its own openframeworks directory structure. But the below will work. 
+[note: normally you wouldn't run code right from the Downloads directory. You should probably move both the Spacebrew directory and the colorTheTemple project under a common directory, with its own openframeworks directory structure. But the below will work.
+
+**Note:** This only be needs to be done if you are setting up the project on a new computer or new account. It is already set up on the `undeed` account on the Mac mini
 
 Download and unzip the latest release of [spacebrew](http://spacebrew.cc) to `~/Downloads`
 
     $ cd ~/Downloads && curl https://codeload.github.com/Spacebrew/spacebrew/legacy.zip/master -o spacebrew.zip
     $ unzip spacebrew.zip
-
-Install the dependencies and run spacebrew
-
-    $ cd ~/Downloads/Spacebrew-spacebrew*
+    $ cd spacebrew
     $ npm install       # install libraries
+
+Run spacebrew
+
+**Note:** These folder paths are for the Mac mini. If the account name or folder paths are different on your computer, make sure you `cd` into the right place :)
+
+    $ cd /Users/undeed/colorTheTemple/Spacebrew
     $ npm start         # run spacebrew
 
 Serve up the spacebrew admin page in another terminal and open it up in your web browser
 
-    $ cd ~/openFrameworks/apps/colorthetemple/WebInterface
-    $ python -m SimpleHTTPServer 8000
-    $ open http://localhost:8000
-
-Serve up the colorthetemple controller page in yet another terminal and open it up in whatever you want to control the app
-
-    $ cd ~/openFrameworks/apps/colorthetemple/WebInterface
+    $ cd /Users/undeed/colorTheTemple/Spacebrew/admin
     $ python -m SimpleHTTPServer 8001
     $ open http://localhost:8001
 
-Finally, connect the controller to the receiver by clicking on them and enjoy the show!
+Serve up the colorthetemple controller page in yet another terminal and open it up in whatever you want to control the app
+
+    $ cd /Users/undeed/colorTheTemple/openFrameworks/apps/colorthetemple/WebInterfaces/colorthetemple
+    $ python -m SimpleHTTPServer 8000
+    $ open http://localhost:8000
+
+Run the openFrameworks app. On the Mac mini, it is already compiled so you should be able to run SpacebrewController.app from `/Users/undeed/colorTheTemple/openFrameworks/apps/colorthetemple/ColorTheTempler/bin` without having to re-compile it in Xcode.
+
+Finally, with everything running, check the Spacebrew admin page (`http://localhost:8001` on the Mac mini) and make sure thte controller (CTT Remote) is connectd to the OF app. If not, click on one, then the other, and a line connected the two should appear.
+
+Enjoy the show!
