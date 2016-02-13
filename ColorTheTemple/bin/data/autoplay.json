@@ -1,0 +1,29 @@
+{
+  "duration": 10,
+  "queue": [
+    "cpg-black",
+    "cpg-safe",
+    "cpg-patterns",
+    "cpg-background",
+    "cpg-end",
+    "ecto-start",
+    "ecto-hathor-glow",
+    "ecto-hathor-titles",
+    "ecto-horus-glow",
+    "ecto-horus-titles",
+    "ecto-augustus-glow",
+    "ecto-augustus-cartouches",
+    "ecto-augustus-offering",
+    "ecto-gods-response",
+    "ecto-end",
+    "off-start",
+    "off-augustus-approaches",
+    "off-altar-glow",
+    "off-3d-rotate",
+    "off-rotate-cakes",
+    "off-hide-cakes",
+    "off-rotate-cakes-back",
+    "off-3d-rotate-back",
+    "off-end"
+  ]
+}

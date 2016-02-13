@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 
+#include "ofxJSON.h"
 #include "ofxSpacebrew.h"
 #include "ofxSyphon.h"
 
@@ -29,7 +30,13 @@ public:
 	
 	// Boolean for whether the movie should be playing
 	bool bPlaying;
-	
+
+	bool bAutoPlay;
+	float lastTime;
+	float autoPlayPauseDuration;
+	int queueIndex;
+	ofxJSON autoPlayQueue;
+
 	float moviePauseTime;
 	
 	// Create Syphon server output

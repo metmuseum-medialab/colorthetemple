@@ -21,6 +21,8 @@ function setup (){
 
 	// configure the publication and subscription feeds
 	sb.addPublish("trigger", "string", "");
+	sb.addPublish("autoplay", "boolean", "");
+	sb.addPublish("autoplay-duration", "range", "");
 
 	// override Spacebrew events - this is how you catch events coming from Spacebrew
 	sb.onOpen = onOpen;
@@ -53,5 +55,30 @@ function onClose() {
  */
 function onButtonPress (evt){
     // console.log("[onButtonPress] " + $(this).attr("id")); 
-    sb.send("trigger", "string", $(this).attr("id"));
+    var id = $(this).attr("id");
+
+    if (id == "autoplay") {
+    	if ($(this).hasClass("btn-success")) {
+    		$(this).addClass("btn-danger");
+    		$(this).removeClass("btn-success");
+    		$(this).text("Autoplay Off");
+    		sb.send("autoplay", "boolean", "false");
+    	} else {
+			$(this).removeClass("btn-danger");
+    		$(this).addClass("btn-success");
+    		$(this).text("Autoplay On");
+    		sb.send("autoplay", "boolean", "true");
+    	}
+    	
+    }
+    else if (id == "autoplay-duration-set") {
+    	sb.send("autoplay-duration", "range", $("#autoplay-duration").val());
+    	$("#autoplay-duration-set").text("Set duration ✔");
+    	setTimeout(function() {
+    		$("#autoplay-duration-set").text("Set duration");
+    	}, 5 * 1000)
+    }
+    else {
+    	sb.send("trigger", "string", $(this).attr("id"));
+    }
 }

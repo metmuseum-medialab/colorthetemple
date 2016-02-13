@@ -10,7 +10,10 @@ void testApp::setup(){
     string description = "oF App for Color the Temple by the Met MediaLab";
     
 	// Add receivers from different button events
+	spacebrew.addPublish( "autoplay-sender", "string" );
 	spacebrew.addSubscribe( "receiver", "string" );
+	spacebrew.addSubscribe( "autoplay", "boolean" );
+	spacebrew.addSubscribe( "autoplay-duration", "range" );
     spacebrew.connect( host, name, description );
     
     // listen to spacebrew events
@@ -40,6 +43,17 @@ void testApp::setup(){
 	activeVid = &vid1;
 	bPlaying = false;
 	moviePauseTime = 0.1;
+
+	bAutoPlay = false;
+	queueIndex = 0;
+	autoPlayPauseDuration = 10;
+	autoPlayQueue.open("autoplay.json");
+	if (autoPlayQueue.isMember("duration")) {
+		float duration = autoPlayQueue["duration"].asFloat();
+		if (duration != 0) {
+			autoPlayPauseDuration = duration;
+		}
+	}
 	
 //	drawHeight = ofGetHeight();
 //	drawWidth = activeVid->width * ofGetHeight() / activeVid->height;
@@ -52,14 +66,32 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
+	// If a movie is currently playing...
 	if (bPlaying) {
 		activeVid->update();
-		
+
+		// Check to see if we hit the pause time...
 		if (activeVid->getPosition() * activeVid->getDuration() >= moviePauseTime && activeVid->isPlaying()) {
 			activeVid->setPaused(true);
 			bPlaying = false;
+			lastTime = ofGetElapsedTimef();
 		}
 		
+	} else {
+		// Otherwise, if we're paused and autoplay is on, check if we need to
+		// advance the queue
+		if (bAutoPlay) {
+			float now = ofGetElapsedTimef();
+			if (now - lastTime > autoPlayPauseDuration) {
+				lastTime = now;
+				string message = autoPlayQueue["queue"][queueIndex].asString();
+				spacebrew.sendString("autoplay-sender", message);
+				ofLogNotice() << queueIndex << ": " << message;
+
+				queueIndex++;
+				queueIndex = ofWrap(queueIndex, 0, autoPlayQueue["queue"].size());
+			}
+		}
 	}
 }
 
@@ -73,8 +105,23 @@ void testApp::draw(){
 
 //--------------------------------------------------------------
 void testApp::onMessage( Spacebrew::Message & m ){
-	
-	if (bPlaying) return;
+
+	if (m.name == "autoplay") {
+		bAutoPlay = m.valueBoolean();
+		ofLogVerbose() << "setting autoplay to " << bAutoPlay;
+		return;
+	}
+	else if (m.name == "autoplay-duration") {
+		autoPlayPauseDuration = m.valueRange();
+		ofLogVerbose() << "setting autoplay to " << autoPlayPauseDuration;
+		return;
+	}
+
+	if (bPlaying) {
+		ofLogNotice() << "Received message while movie is playing, ignoring: "
+			<< m.value;
+		return;
+	}
 	
 	vector <string> stringBits = ofSplitString(m.value, "-");
 	string prefix = stringBits[0];
