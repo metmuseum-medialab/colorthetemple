@@ -7,7 +7,7 @@ The Color the Temple project is an interactive, projection mapped presentation a
 
 Follow these steps if you are setting up a new computer from scratch. This includes setup & compilation of the main frontend C++ application, setup of the Spacebrew backend, and setup of MadMapper for calibrating projector output.
 
-If this is already set up and you are looking for daily startup procedures, jump to the next section.
+If this is already set up and you are looking for daily startup procedures, jump to the **Daily start procedures** section.
 
 
 ## Compile the openFrameworks presentation app
@@ -61,7 +61,7 @@ cd ..
 ### Build the app
 Open SpacebrewController.xcodeproj in Xcode. Make sure to build the **Debug**, not the **Release** target. Add the video files to `~/openFrameworks/apps/colorthetemple/ColorTheTemple/bin/data`
 
-## Run MadMapper for projection mapping
+## Setup MadMapper for projection mapping
 
 Install and run [MadMapper](http://madmapper.com), after connecting to an external projector.
 
@@ -138,3 +138,74 @@ To make a connection, click on the text label of one side (e.g. "trigger") and t
 ![image](WebInterfaces/spacebrew-conenctions.png)
 
 Enjoy the show!
+
+
+## Daily start procedures
+
+### Terminal First Tab
+
+Copy and paste one line by one line
+
+Open first tab­
+
+```
+cd /Users/undeed/colorTheTemple/Spacebrew
+npm start
+```
+
+### Terminal Second Tab
+
+Copy and paste one line by one line
+
+Open 2nd tab
+
+```
+cd /Users/undeed/colorTheTemple/Spacebrew/admin
+python ­m SimpleHTTPServer 8001
+```
+
+### Terminal Third Tab
+
+Copy and paste one line by one line
+
+```
+cd /Users/undeed/colorTheTemple/openFrameworks/apps/colorthetemple/WebInterfaces/colorthetemple
+python ­m SimpleHTTPServer 8000
+```
+
+### Open Browser Windows
+
+These are bookmarked in the Chrome bookmarks bar, or you can click here
+
+- Spacebrew Admin [http://localhost:8001/](http://localhost:8001/)
+- Color the Temple Controller [http://localhost:8000/](http://localhost:8000/)
+
+**Make sure each web page is only opened once. Multiple copies might cause problems**
+
+### Open SpacebrewController.app
+
+Double click SpacebrewController.app alias on Desktop
+
+### Go to browsers
+
+- Go to [http://localhost:8001/](http://localhost:8001/)
+- Make sure you see both “Color the Temple Controller” and “CTT Remote” in the Spacebrew admin.
+	- If not, try refreshing both browser windows
+- If you do not want auto play:
+	- click the “Patterns” in blue in the browser
+
+- If you want auto play mode
+	- Click the Autoplay button at the top of the browser. When it is green, auto play is on. When it is red, auto play is off. To change the playback speed, set the amount of time to wait (in seconds) at each pause in the video and click the “Set duration” button.
+
+### Open MadMapper
+
+Double click “Color the Temple Mapping” alias on desktop
+
+MadMapper Instructions:
+
+- Go to output
+- Choose full screen
+- Leftmost icon: choose “Spacebrew controller” under “Syphon”
+- Mesh icon (second tab, square with dots on corners): select surface quad & splitscreen
+
+### Setting the Tablet controller
