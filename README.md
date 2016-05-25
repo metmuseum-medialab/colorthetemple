@@ -61,24 +61,6 @@ cd ..
 ### Build the app
 Open SpacebrewController.xcodeproj in Xcode. Make sure to build the **Debug**, not the **Release** target. Add the video files to `~/openFrameworks/apps/colorthetemple/ColorTheTemple/bin/data`
 
-## Setup MadMapper for projection mapping
-
-Install and run [MadMapper](http://madmapper.com), after connecting to an external projector.
-
-Open up MadMapper, which will be used to deform the projection. In order to calibrate the projection as described below, the openFrameworks SpacebrewController application (detailed above) must be running, and should be set so that some content is visible in the window. This can be done via web controller.
-
-- From the Inputs tab, click the Syphon > ColorTheTemple input
-- From the Surfaces tab, add a quad surface
-- From the menu bar, select View > Input
-	- Use the controls to ensure the quad surface fully surrounds the content with the least amount of additional space around the edges
-- From the menu bar, select View > Output Preview
-	- Use the four corner control points to distort the projection so that it lines up with the stone
-	- It is helpful to start in one corner and work your way around until the projection lines up as best as possible. You will probably need to adjust each corner several times after adjusting other corners. After this step, the projection should be mostly aligned. Use some features near the corners to check for alignment, such as the heels of a foot, the top of a crown, etc.
-	- To fine-tune smaller details such as heiroglyphs, click the "Mesh Warping" checkbox in the sidebar. Subdividing the mesh into a 16x16 grid should give enough resolution to control minute details. Drag individual mesh points as needed. You can also select points and then use the arrow keys to adjust one pixel at a time.
-- to use on the projector, go to view -> view fullscreen
-  - make sure the display mirroring is OFF
-
-
 ## Setup Spacebrew for remote control
 [note: normally you wouldn't run code right from the Downloads directory. You should probably move both the Spacebrew directory and the colorTheTemple project under a common directory, with its own openframeworks directory structure. But the below will work.
 
@@ -137,7 +119,23 @@ To make a connection, click on the text label of one side (e.g. "trigger") and t
 
 ![image](WebInterfaces/spacebrew-conenctions.png)
 
-Enjoy the show!
+
+## Setup MadMapper for projection mapping
+
+Install and run [MadMapper](http://madmapper.com), after connecting to an external projector.
+
+Open up MadMapper, which will be used to deform the projection. In order to calibrate the projection as described below, the openFrameworks SpacebrewController application (detailed above) must be running, and should be set so that some content is visible in the window. This can be done via web controller.
+
+- From the Inputs tab, click the Syphon > ColorTheTemple input
+- From the Surfaces tab, add a quad surface
+- From the menu bar, select View > Input
+	- Use the controls to ensure the quad surface fully surrounds the content with the least amount of additional space around the edges
+- From the menu bar, select View > Output Preview
+	- Use the four corner control points to distort the projection so that it lines up with the stone
+	- It is helpful to start in one corner and work your way around until the projection lines up as best as possible. You will probably need to adjust each corner several times after adjusting other corners. After this step, the projection should be mostly aligned. Use some features near the corners to check for alignment, such as the heels of a foot, the top of a crown, etc.
+	- To fine-tune smaller details such as heiroglyphs, click the "Mesh Warping" checkbox in the sidebar. Subdividing the mesh into a 16x16 grid should give enough resolution to control minute details. Drag individual mesh points as needed. You can also select points and then use the arrow keys to adjust one pixel at a time.
+- to use on the projector, go to view -> view fullscreen
+  - make sure the display mirroring is OFF
 
 
 ## Daily start procedures
@@ -209,3 +207,6 @@ MadMapper Instructions:
 - Mesh icon (second tab, square with dots on corners): select surface quad & splitscreen
 
 ### Setting the Tablet controller
+
+
+Enjoy the show!
