@@ -134,6 +134,8 @@ Open up MadMapper, which will be used to deform the projection. In order to cali
 	- Use the four corner control points to distort the projection so that it lines up with the stone
 	- It is helpful to start in one corner and work your way around until the projection lines up as best as possible. You will probably need to adjust each corner several times after adjusting other corners. After this step, the projection should be mostly aligned. Use some features near the corners to check for alignment, such as the heels of a foot, the top of a crown, etc.
 	- To fine-tune smaller details such as heiroglyphs, click the "Mesh Warping" checkbox in the sidebar. Subdividing the mesh into a 16x16 grid should give enough resolution to control minute details. Drag individual mesh points as needed. You can also select points and then use the arrow keys to adjust one pixel at a time. Additional help is available in the [Grid Warping](http://www.madmapper.com/grid-warping-in-madmapper/) tutorial.
+	
+Once the mapping has been set up, you should save this file so that this procedure doesn't need to be performed again unless the projector is moved.
 
 
 ## Daily start procedures
@@ -201,8 +203,7 @@ MadMapper Instructions:
 
 - Go to output
 - Choose full screen
-- Leftmost icon: choose “Spacebrew controller” under “Syphon”
-- Mesh icon (second tab, square with dots on corners): select surface quad & splitscreen
+- If the projection does not line up with the temple, see the above section about MadMapper setup to map/calibrate the projection with the carvings in the stone.
 
 ### Setting the Tablet controller
 
