@@ -1,25 +1,34 @@
 Color The Temple
 ================
 
-The Color the Temple project is an interactive, projection mapped presentation about Hathor, Horus and Caesar Augustus. The content and software was initially developed by Maria Paula Saba and Matt Felsen during their internship in the Media Lab at the Metropolitan Museum of Art.
+The Color the Temple project is an interactive, projection mapped presentation about Hathor, Horus and Caesar Augustus. The content and software was initially developed by Maria Paula Saba and Matt Felsen during their internship in the Media Lab at the Metropolitan Museum of Art under the supervision of Don Undeen. They worked with Erin Peters during her fellowship at the Egyptian Art Department under the supervision of Diana Patch.
+
+# First-time setup
+
+Follow these steps if you are setting up a new computer from scratch. This includes setup & compilation of the main frontend C++ application, setup of the Spacebrew backend, and setup of MadMapper for calibrating projector output.
+
+If this is already set up and you are looking for daily startup procedures, jump to the next section.
 
 
-## Compile and run the openFrameworks presentation app
+## Compile the openFrameworks presentation app
+
+### Download openFrameworks
 
 Download the v0.8.4 release of [openFrameworks](http://openframeworks.cc):
 [http://www.openframeworks.cc/versions/v0.8.4/of_v0.8.4_osx_release.zip](http://www.openframeworks.cc/versions/v0.8.4/of_v0.8.4_osx_release.zip)
 
 Rename the folder to `openFrameworks` and put it in your home folder. The full page should be something like `/Users/YOUR_USER_NAME/openFrameworks`
 
-Clone this repository to `~/openFrameworks/apps`
+Clone this repository into `~/openFrameworks/apps`
 
 ```
 cd ~/openFrameworks/apps
 git clone http://github.com/metmuseum-medialab/colorthetemple
 ````
 
+### Download dependencies
 
-Clone [ofxJSON](https://github.com/jefftimesten/ofxJSON.git), [ofxSyphon](https://github.com/astellato/ofxSyphon), [ofxSpacebrew](https://github.com/Spacebrew/ofxSpacebrew), and [ofxLibwebsockets](https://github.com/labatrockwell/ofxLibwebsockets) to `~/openFrameworks/addons`
+Clone these required addons [ofxJSON](https://github.com/jefftimesten/ofxJSON.git), - [ofxSyphon](https://github.com/astellato/ofxSyphon), [ofxSpacebrew](https://github.com/Spacebrew/ofxSpacebrew), and [ofxLibwebsockets](https://github.com/labatrockwell/ofxLibwebsockets) into `~/openFrameworks/addons`
 
 ```
 cd ~/openFrameworks/addons
@@ -50,19 +59,24 @@ cd ..
 ``` 
 
 ### Build the app
-Open SpacebrewController.xcodeproj. Make sure to build the DEBUG, not the RELEASE target. Add the video files to `~/openFrameworks/apps/colorthetemple/ColorTheTemple/bin/data`
+Open SpacebrewController.xcodeproj in Xcode. Make sure to build the **Debug**, not the **Release** target. Add the video files to `~/openFrameworks/apps/colorthetemple/ColorTheTemple/bin/data`
 
 ## Run MadMapper for projection mapping
 
 Install and run [MadMapper](http://madmapper.com), after connecting to an external projector.
 
-Open up MadMapper, which will be used to deform the projection
+Open up MadMapper, which will be used to deform the projection. In order to calibrate the projection as described below, the openFrameworks SpacebrewController application (detailed above) must be running, and should be set so that some content is visible in the window. This can be done via web controller.
 
-* click the colorthetemple syphon plugin
-* add a square mesh from the middle icon in the top left corner
-* click the 'warp mesh' checkbox in the bottom left, then start tweaking the subdivisions, dragging the mesh points...
-* to use on the projector, go to view -> view fullscreen
-  * make sure the display mirroring is OFF
+- From the Inputs tab, click the Syphon > ColorTheTemple input
+- From the Surfaces tab, add a quad surface
+- From the menu bar, select View > Input
+	- Use the controls to ensure the quad surface fully surrounds the content with the least amount of additional space around the edges
+- From the menu bar, select View > Output Preview
+	- Use the four corner control points to distort the projection so that it lines up with the stone
+	- It is helpful to start in one corner and work your way around until the projection lines up as best as possible. You will probably need to adjust each corner several times after adjusting other corners. After this step, the projection should be mostly aligned. Use some features near the corners to check for alignment, such as the heels of a foot, the top of a crown, etc.
+	- To fine-tune smaller details such as heiroglyphs, click the "Mesh Warping" checkbox in the sidebar. Subdividing the mesh into a 16x16 grid should give enough resolution to control minute details. Drag individual mesh points as needed. You can also select points and then use the arrow keys to adjust one pixel at a time.
+- to use on the projector, go to view -> view fullscreen
+  - make sure the display mirroring is OFF
 
 
 ## Setup Spacebrew for remote control
