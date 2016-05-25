@@ -11,6 +11,7 @@
 		86135253dc7909ca8590e1574a6d2112 /* Protocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57eefec8b85f7c3b15dd45a430db9c25 /* Protocol.cpp */; };
 		9ef1133bc23669a5c94fe30f676125b8 /* jsoncpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69668fde141262bc3c6ca9290e61cfa8 /* jsoncpp.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		C956D98F1C6FC187005F77A6 /* ofxJSONElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C956D98D1C6FC187005F77A6 /* ofxJSONElement.cpp */; };
 		DDB727161906B59F00570D49 /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDB727091906B59F00570D49 /* ofxSyphonClient.mm */; };
 		DDB727171906B59F00570D49 /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDB7270B1906B59F00570D49 /* ofxSyphonServer.mm */; };
 		DDB727181906B59F00570D49 /* ofxSyphonServerDirectory.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDB7270D1906B59F00570D49 /* ofxSyphonServerDirectory.mm */; };
@@ -131,6 +132,9 @@
 		9bd79105e0d8162ad50c74e63b2cf706 /* stack.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = stack.h; path = ../../../addons/ofxLibwebsockets/libs/openssl/openssl/stack.h; sourceTree = SOURCE_ROOT; };
 		9dba9304fb99bdb218246dde355b3d83 /* e_os2.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = e_os2.h; path = ../../../addons/ofxLibwebsockets/libs/openssl/openssl/e_os2.h; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
+		C956D98C1C6FC187005F77A6 /* ofxJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxJSON.h; path = ../../../addons/ofxJSON/src/ofxJSON.h; sourceTree = "<group>"; };
+		C956D98D1C6FC187005F77A6 /* ofxJSONElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxJSONElement.cpp; path = ../../../addons/ofxJSON/src/ofxJSONElement.cpp; sourceTree = "<group>"; };
+		C956D98E1C6FC187005F77A6 /* ofxJSONElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxJSONElement.h; path = ../../../addons/ofxJSON/src/ofxJSONElement.h; sourceTree = "<group>"; };
 		DDB727071906B59F00570D49 /* ofxSyphon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxSyphon.h; sourceTree = "<group>"; };
 		DDB727081906B59F00570D49 /* ofxSyphonClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxSyphonClient.h; sourceTree = "<group>"; };
 		DDB727091906B59F00570D49 /* ofxSyphonClient.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ofxSyphonClient.mm; sourceTree = "<group>"; };
@@ -394,6 +398,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				C956D9891C6FC16F005F77A6 /* ofxJSON */,
 				DDB727051906B59F00570D49 /* ofxSyphon */,
 				aae50e341c7382a4ef10af5ab25be21b /* ofxLibwebsockets */,
 				961f0189d3fc79a9a11f56e1934de9fd /* ofxSpacebrew */,
@@ -429,6 +434,24 @@
 				BBAB23BE13894E4700AA2426 /* GLUT.framework */,
 			);
 			name = "3rd party frameworks";
+			sourceTree = "<group>";
+		};
+		C956D9891C6FC16F005F77A6 /* ofxJSON */ = {
+			isa = PBXGroup;
+			children = (
+				C956D98A1C6FC173005F77A6 /* src */,
+			);
+			name = ofxJSON;
+			sourceTree = "<group>";
+		};
+		C956D98A1C6FC173005F77A6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C956D98C1C6FC187005F77A6 /* ofxJSON.h */,
+				C956D98D1C6FC187005F77A6 /* ofxJSONElement.cpp */,
+				C956D98E1C6FC187005F77A6 /* ofxJSONElement.h */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 		DDB727051906B59F00570D49 /* ofxSyphon */ = {
@@ -682,6 +705,7 @@
 				DDB7271A1906B59F00570D49 /* SyphonNameboundClient.m in Sources */,
 				a08d840e5dc2c6a7f0e514bc0baa6921 /* ofxSpacebrew.cpp in Sources */,
 				DDB727181906B59F00570D49 /* ofxSyphonServerDirectory.mm in Sources */,
+				C956D98F1C6FC187005F77A6 /* ofxJSONElement.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
