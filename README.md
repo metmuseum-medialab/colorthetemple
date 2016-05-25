@@ -122,7 +122,7 @@ To make a connection, click on the text label of one side (e.g. "trigger") and t
 
 ## Setup MadMapper for projection mapping
 
-Install and run [MadMapper](http://madmapper.com), after connecting to an external projector.
+Install and run [MadMapper](http://madmapper.com), after connecting to an external projector. If you are not familiar with this software, you may want to look over the [Basic Introduction](http://www.madmapper.com/basic-introduction/) guide first.
 
 Open up MadMapper, which will be used to deform the projection. In order to calibrate the projection as described below, the openFrameworks SpacebrewController application (detailed above) must be running, and should be set so that some content is visible in the window. This can be done via web controller.
 
@@ -133,9 +133,7 @@ Open up MadMapper, which will be used to deform the projection. In order to cali
 - From the menu bar, select View > Output Preview
 	- Use the four corner control points to distort the projection so that it lines up with the stone
 	- It is helpful to start in one corner and work your way around until the projection lines up as best as possible. You will probably need to adjust each corner several times after adjusting other corners. After this step, the projection should be mostly aligned. Use some features near the corners to check for alignment, such as the heels of a foot, the top of a crown, etc.
-	- To fine-tune smaller details such as heiroglyphs, click the "Mesh Warping" checkbox in the sidebar. Subdividing the mesh into a 16x16 grid should give enough resolution to control minute details. Drag individual mesh points as needed. You can also select points and then use the arrow keys to adjust one pixel at a time.
-- to use on the projector, go to view -> view fullscreen
-  - make sure the display mirroring is OFF
+	- To fine-tune smaller details such as heiroglyphs, click the "Mesh Warping" checkbox in the sidebar. Subdividing the mesh into a 16x16 grid should give enough resolution to control minute details. Drag individual mesh points as needed. You can also select points and then use the arrow keys to adjust one pixel at a time. Additional help is available in the [Grid Warping](http://www.madmapper.com/grid-warping-in-madmapper/) tutorial.
 
 
 ## Daily start procedures
