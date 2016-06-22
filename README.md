@@ -41,7 +41,8 @@ git clone https://github.com/labatrockwell/ofxLibwebsockets
 Check out specific versions of these addons that are known to work:
 
 ```
-cd ofJSON
+cd ~/openFrameworks/addons
+cd ofxJSON
 git checkout 5934d70
 cd ..
 
