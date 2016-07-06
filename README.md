@@ -160,7 +160,7 @@ Open 2nd tab
 
 ```
 cd /Users/undeed/colorTheTemple/Spacebrew/admin
-python ­m SimpleHTTPServer 8001
+python -m SimpleHTTPServer 8001
 ```
 
 ### Terminal Third Tab
@@ -169,7 +169,7 @@ Copy and paste one line by one line
 
 ```
 cd /Users/undeed/colorTheTemple/openFrameworks/apps/colorthetemple/WebInterfaces/colorthetemple
-python ­m SimpleHTTPServer 8000
+python -m SimpleHTTPServer 8000
 ```
 
 ### Open Browser Windows
